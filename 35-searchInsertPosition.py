@@ -4,18 +4,12 @@ class Solution:
         lower = 0 
 
         if target > nums[-1]:
-            print('here')
             return len(nums)
         if target < nums[0]:
-            print(str(nums[0]))
             return 0
-
 
         while upper > lower:
             check = ((upper - lower )//2) + lower
-            print("upper " + str(upper))
-            print("lower " + str(lower))
-            print("check " + str(check))
             if nums[check] == target:
                 return check
 
