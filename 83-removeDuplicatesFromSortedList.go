@@ -26,10 +26,7 @@ func deleteDuplicates(head *ListNode) *ListNode {
 			curr.Next = next.Next
 		} else {
 			curr = curr.Next
-
 		}
-
 	}
-
 	return head
 }
