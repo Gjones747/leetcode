@@ -19,17 +19,10 @@ func deleteDuplicates(head *ListNode) *ListNode {
 	if curr == nil {
 		return head
 	}
-
-	check := make(map[int]int)
-
 	for curr.Next != nil {
 		next := curr.Next
 
-		check[curr.Val] += 1
-
-		_, isKeyInMap := check[next.Val]
-
-		if isKeyInMap {
+		if curr.Val == curr.Next.Val {
 			curr.Next = next.Next
 		} else {
 			curr = curr.Next
